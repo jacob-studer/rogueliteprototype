@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://buiscn001"]
+
+[ext_resource type="Script" path="res://scripts/ui.gd" id="1_script"]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_script")
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 216.0
+offset_bottom = 40.0
+max_value = 100.0
+value = 100.0
+show_percentage = false
+
+[node name="HealthLabel" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 44.0
+offset_right = 216.0
+offset_bottom = 64.0
+text = "100 / 100"
+
+[node name="EnemyCountLabel" type="Label" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -160.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = 40.0
+horizontal_alignment = 2
+text = "Enemies: 0"
+
+[node name="InstructionsLabel" type="Label" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -40.0
+offset_right = 500.0
+offset_bottom = -16.0
+text = "WASD move   |   SPACE attack"
+
+[node name="RoomClearedLabel" type="Label" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -60.0
+offset_right = 260.0
+offset_bottom = -20.0
+horizontal_alignment = 1
+text = "Room Cleared! Walk into a pickup to choose an upgrade."
+
+[node name="DeathLabel" type="Label" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -20.0
+offset_right = 160.0
+offset_bottom = 20.0
+horizontal_alignment = 1
+text = "You Died — Press R to Restart"
