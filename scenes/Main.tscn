@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bmain001"]
+[gd_scene load_steps=7 format=3 uid="uid://bmain001"]
 
 [ext_resource type="PackedScene" uid="uid://bplayer001" path="res://scenes/Player.tscn" id="1_player"]
+[ext_resource type="PackedScene" uid="uid://benemy001" path="res://scenes/Enemy.tscn" id="2_enemy"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_floor"]
 size = Vector3(20, 0.2, 20)
@@ -38,3 +39,6 @@ shape = SubResource("BoxShape3D_floor")
 
 [node name="Player" parent="." instance=ExtResource("1_player")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Enemy" parent="." instance=ExtResource("2_enemy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, 5)
